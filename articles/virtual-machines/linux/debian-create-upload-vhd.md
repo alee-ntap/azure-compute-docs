@@ -89,7 +89,7 @@ This process creates a VHD `image_[release]_azure_amd64.vhd` with a rounded size
 >[!NOTE]
 > Rather than cloning the salsa repository and building images locally, current stable images can be built and downloaded from [FAI](https://fai-project.org/FAIme/cloud/).
 
-After you create a stable Debian VHD image and before you upload, verify that the following packages are installed:
+After you create a Debian VHD image and before you upload, verify that the following packages are installed:
 
 * apt-get install hyperv-daemons
 * apt-get install waagent # *(Optional but recommended for password resets and the use of extensions)*
