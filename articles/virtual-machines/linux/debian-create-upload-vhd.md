@@ -41,18 +41,18 @@ $ sudo apt install --no-install-recommends ca-certificates debsums dosfstools \
 $ cd ./debian-cloud-images
 ```
 
-Optional: Customize the build by adding scripts (for example, shell scripts) to `./config_space/scripts/AZURE`.
+Optional: Customize the build by adding scripts (for example, shell scripts) to `./config_space/[release]/scripts/AZURE`.
 
 ## Script example to customize the image
 
 ```
-$ mkdir -p ./config_space/scripts/AZURE
-$ cat > ./config_space/scripts/AZURE/10-custom <<EOF
+$ mkdir -p ./config_space/[release]/scripts/AZURE
+$ cat > ./config_space/scripts/[release]/AZURE/10-custom <<EOF
 #!/bin/bash
 
 \$ROOTCMD bash -c "echo test > /usr/local/share/testing"
 EOF
-$ sudo chmod 755 ./config_space/scripts/AZURE/10-custom
+$ sudo chmod 755 ./config_space/[release]/scripts/AZURE/10-custom
 ```
 
 Prefix any commands you want to have customizing the image with `$ROOTCMD`. It's aliased as `chroot $target`.
